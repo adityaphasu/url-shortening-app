@@ -8,9 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "shorten-desktop": "url('/images/bg-shorten-desktop.svg')",
+        "shorten-mobile": "url('/images/bg-shorten-mobile.svg')",
+        "boost-desktop": "url('/images/bg-boost-desktop.svg')",
+        "boost-mobile": "url('/images/bg-boost-mobile.svg')",
+      },
       colors: {
         cyan: "hsl(180, 66%, 49%)",
         gray: "hsl(0, 0%, 75%)",
+        "light-violet": "hsl(230, 25%, 95%)",
         "dark-violet": "hsl(257, 27%, 26%)",
         "secondary-red": "hsl(0, 87%, 67%)",
         "grayish-violet": "hsl(257, 7%, 63%)",
