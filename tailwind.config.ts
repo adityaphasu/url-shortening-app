@@ -25,7 +25,7 @@ const config: Config = {
         "very-dark-violet": "hsl(260, 8%, 14%)",
       },
       fontFamily: {
-        poppins: "var(--font-poppins)",
+        poppins: "[var(--font-poppins), sans-serif]",
       },
     },
   },
