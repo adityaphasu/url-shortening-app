@@ -2,10 +2,11 @@ import { cn } from "@/lib/cn";
 
 type ButtonProps = {
   children: React.ReactNode;
-  classname?: string;
-  bgColor?: string;
   ariaLabel?: string;
+  bgColor?: string;
+  classname?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 };
 
 const Button = ({
@@ -14,11 +15,13 @@ const Button = ({
   bgColor,
   ariaLabel,
   onClick,
+  type,
 }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
       aria-label={ariaLabel}
+      type={type}
       className={cn(
         "text-xl font-bold text-white transition hover:scale-105",
         classname,
