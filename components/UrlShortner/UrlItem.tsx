@@ -9,9 +9,9 @@ type UrlItemProps = {
 
 const UrlItem = ({ url, urlList, setUrlList }: UrlItemProps) => {
   const toogleCopied = (url: Urls, value: boolean) => {
-    const index = urlList.findIndex((item) => item.short === url.short);
-    const newUrlList = [...urlList];
-    newUrlList[index].copied = value;
+    const newUrlList = urlList.map((item) => {
+      return item.short === url.short ? { ...item, copied: value } : item;
+    });
     setUrlList(newUrlList);
   };
 
