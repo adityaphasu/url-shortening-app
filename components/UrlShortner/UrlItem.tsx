@@ -1,0 +1,51 @@
+import Link from "next/link";
+import Button from "@/components/Button";
+
+type UrlItemProps = {
+  url: Urls;
+  urlList: Urls[];
+  setUrlList: React.Dispatch<React.SetStateAction<Urls[]>>;
+};
+
+const UrlItem = ({ url, urlList, setUrlList }: UrlItemProps) => {
+  const toogleCopied = (url: Urls, value: boolean) => {
+    const index = urlList.findIndex((item) => item.short === url.short);
+    const newUrlList = [...urlList];
+    newUrlList[index].copied = value;
+    setUrlList(newUrlList);
+  };
+
+  const handlyCopy = (selectedUrl: Urls) => {
+    toogleCopied(selectedUrl, true);
+
+    navigator.clipboard.writeText(selectedUrl.short);
+
+    setTimeout(() => {
+      toogleCopied(selectedUrl, false);
+    }, 1000);
+  };
+
+  return (
+    <div className="flex flex-col rounded-lg bg-white md:flex-row md:items-center lg:text-xl">
+      <p className="w-full truncate border-b p-3 text-left text-very-dark-violet md:border-none lg:px-8 lg:py-6">
+        {url.long}
+      </p>
+      <div className="flex flex-grow flex-col items-start justify-between gap-3 p-3 md:flex-row md:items-center lg:gap-6 lg:px-6">
+        <Link
+          href={`${url.short}`}
+          className="text-cyan transition hover:text-very-dark-violet hover:underline"
+        >
+          {`${url.short}`}
+        </Link>
+        <Button
+          classname="px-[1.6rem] py-2 rounded-md w-full md:w-[6.5rem] flex justify-center text-lg"
+          bgColor={url.copied ? "bg-dark-violet" : ""}
+          onClick={() => handlyCopy(url)}
+        >
+          {url.copied ? "Copied!" : "Copy"}
+        </Button>
+      </div>
+    </div>
+  );
+};
+export default UrlItem;
