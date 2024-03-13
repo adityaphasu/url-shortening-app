@@ -23,7 +23,7 @@ const Button = ({
       aria-label={ariaLabel}
       type={type}
       className={cn(
-        "text-xl font-bold text-white transition hover:scale-105",
+        "text-xl font-bold text-white transition",
         classname,
         bgColor || "bg-cyan hover:bg-teal-400",
       )}

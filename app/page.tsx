@@ -1,4 +1,4 @@
-import UrlShortner from "@/components/UrlShortner";
+import UrlShortner from "@/components/UrlShortner/UrlShortner";
 import CallToAction from "@/components/Sections/CallToAction";
 import Features from "@/components/Sections/Features";
 import Hero from "@/components/Sections/Hero";
