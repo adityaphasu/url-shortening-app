@@ -19,8 +19,8 @@ const Hero = () => {
             More than just shorter links
           </h1>
           <p className="leading-7 lg:mr-4 lg:leading-9 xl:text-[1.38rem]">
-            Build your brand's recognition and get detailed insights on how your
-            links are performing.
+            Build your brand&apos;s recognition and get detailed insights on how
+            your links are performing.
           </p>
         </div>
         <Button classname="rounded-full px-10 py-3.5">Get Started</Button>
