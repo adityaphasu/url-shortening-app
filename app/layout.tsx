@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Sections/Header";
@@ -14,9 +14,13 @@ export const metadata: Metadata = {
   title: "Shortly",
   description:
     "A url shortner page where you can shorten your long urls with ease.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  keywords: ["shortly", "url", "shortner", "shorten", "link"],
+  creator: "Aditya Phasu",
+  manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#eff1f7",
 };
 
 export default function RootLayout({
