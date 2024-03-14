@@ -4,14 +4,14 @@ import Button from "@/components/Button";
 import { isValidUrl, shortenUrl } from "@/utils/utils";
 
 type InputFormProps = {
-  setUrlList: React.Dispatch<React.SetStateAction<Urls[]>>;
+  setUrlList: React.Dispatch<React.SetStateAction<Url[]>>;
 };
 
 const InputForm = ({ setUrlList }: InputFormProps) => {
   const [error, setError] = useState("");
   const [inputUrl, setInputUrl] = useState("");
 
-  const updateUrlList = (newUrlObj: Urls) => {
+  const updateUrlList = (newUrlObj: Url) => {
     setUrlList((prev) => {
       const newUrlList = [...prev, newUrlObj];
       localStorage.setItem("urls", JSON.stringify(newUrlList));
@@ -54,8 +54,12 @@ const InputForm = ({ setUrlList }: InputFormProps) => {
       onSubmit={handleSubmit}
       className="-mt-[5.2rem] flex flex-col gap-6 rounded-xl bg-dark-violet bg-shorten-mobile bg-right-top bg-no-repeat p-6 text-white lg:-mt-28 lg:flex-row lg:items-center lg:bg-shorten-desktop lg:bg-cover lg:px-[4.15rem] lg:py-[3.25rem]"
     >
+      <label htmlFor="urlInput" className="sr-only">
+        Shorten a link here...
+      </label>
       <input
         type="text"
+        id="urlInput"
         value={inputUrl}
         onChange={handleUserInput}
         className={cn(
@@ -63,6 +67,7 @@ const InputForm = ({ setUrlList }: InputFormProps) => {
           error && "ring-4 ring-secondary-red",
         )}
         placeholder="Shorten a link here..."
+        aria-required="true"
       />
       <Button
         type="submit"
@@ -71,7 +76,10 @@ const InputForm = ({ setUrlList }: InputFormProps) => {
         Shorten It!
       </Button>
       {error && (
-        <p className="absolute top-[7.5rem] italic text-secondary-red">
+        <p
+          className="absolute top-[7.5rem] italic text-secondary-red"
+          aria-live="polite"
+        >
           {error}
         </p>
       )}

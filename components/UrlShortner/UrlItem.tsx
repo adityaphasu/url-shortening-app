@@ -2,20 +2,20 @@ import Link from "next/link";
 import Button from "@/components/Button";
 
 type UrlItemProps = {
-  url: Urls;
-  urlList: Urls[];
-  setUrlList: React.Dispatch<React.SetStateAction<Urls[]>>;
+  url: Url;
+  urlList: Url[];
+  setUrlList: React.Dispatch<React.SetStateAction<Url[]>>;
 };
 
 const UrlItem = ({ url, urlList, setUrlList }: UrlItemProps) => {
-  const toogleCopied = (url: Urls, value: boolean) => {
+  const toogleCopied = (url: Url, value: boolean) => {
     const newUrlList = urlList.map((item) => {
       return item.short === url.short ? { ...item, copied: value } : item;
     });
     setUrlList(newUrlList);
   };
 
-  const handlyCopy = (selectedUrl: Urls) => {
+  const handlyCopy = (selectedUrl: Url) => {
     toogleCopied(selectedUrl, true);
 
     navigator.clipboard.writeText(selectedUrl.short);

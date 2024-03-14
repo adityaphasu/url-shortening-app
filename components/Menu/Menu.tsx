@@ -21,8 +21,9 @@ const Menu = () => {
       )}
       <Button
         bgColor="bg-transparent"
-        classname="lg:hidden z-50"
-        ariaLabel="Toggle Menu"
+        classname="lg:hidden z-50 active:outline focus:outline"
+        ariaLabel={isOpen ? "Close menu" : "Open menu"}
+        ariaExpanded={isOpen}
         onClick={handleClick}
       >
         <div className="space-y-2">
