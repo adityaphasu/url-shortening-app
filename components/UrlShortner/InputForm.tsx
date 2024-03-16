@@ -2,6 +2,7 @@ import { useState } from "react";
 import { cn } from "@/lib/cn";
 import Button from "@/components/Button";
 import { isValidUrl, shortenUrl } from "@/utils/utils";
+import { toast } from "sonner";
 
 type InputFormProps = {
   setUrlList: React.Dispatch<React.SetStateAction<Url[]>>;
@@ -32,11 +33,14 @@ const InputForm = ({ setUrlList }: InputFormProps) => {
 
     try {
       const shortenedUrlResult = await shortenUrl(inputUrl);
+
       updateUrlList({
         long: inputUrl,
         short: `https://1pt.co/${shortenedUrlResult.short}`,
         copied: false,
       });
+
+      toast.success("Link shortened successfully");
       setInputUrl("");
       setError("");
     } catch (error) {
