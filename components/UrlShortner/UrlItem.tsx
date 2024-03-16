@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/Button";
+import { motion } from "framer-motion";
 
 type UrlItemProps = {
   url: Url;
@@ -26,7 +27,13 @@ const UrlItem = ({ url, urlList, setUrlList }: UrlItemProps) => {
   };
 
   return (
-    <div className="flex flex-col rounded-lg bg-white md:flex-row md:items-center lg:text-xl">
+    <motion.div
+      className="flex flex-col rounded-lg bg-white md:flex-row md:items-center lg:text-xl"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layout
+    >
       <p className="w-full truncate border-b p-3 text-left text-very-dark-violet md:border-none lg:px-8 lg:py-6">
         {url.long}
       </p>
@@ -45,7 +52,7 @@ const UrlItem = ({ url, urlList, setUrlList }: UrlItemProps) => {
           {url.copied ? "Copied!" : "Copy"}
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default UrlItem;
