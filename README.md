@@ -1,6 +1,6 @@
 # Shortly URL shortening API
 
-This project is a URL shortening service built with Nextjs and TypeScript. It provides a user-friendly interface for shortening long URLs, making them easier to share and remember. It uses local storage to store the shortened links, so they persist even after refreshing the browser.It is a [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
+This project is a URL shortening service built with Nextjs and TypeScript. It provides a user-friendly interface for shortening long URLs, making them easier to share and remember. It uses local storage to store the shortened links, so they persist even after refreshing the browser. It is a [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
 
 ![Shortly URL shortening API](./public/desktop-preview.jpg)
 
