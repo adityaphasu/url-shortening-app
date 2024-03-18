@@ -6,8 +6,8 @@ This project is a URL shortening service built with Nextjs and TypeScript. It pr
 
 ## Links
 
-- [Live Site]()
-- [Frontend Mentor Challenge]()
+- [Live Site](https://shortly-azure.vercel.app/)
+- [Frontend Mentor Challenge](https://www.frontendmentor.io/solutions/url-shortening-api-nextjs-typescript-ov1mUC9j-0)
 
 ## Features
 
