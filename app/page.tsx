@@ -8,6 +8,7 @@ export default function Home() {
     <main className="overflow-hidden text-center">
       <Hero />
       <section className="bg-light-violet p-6">
+        <h2 className="sr-only">Shorten Url here:</h2>
         <UrlShortner />
       </section>
       <Features />

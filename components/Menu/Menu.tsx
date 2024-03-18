@@ -26,11 +26,11 @@ const Menu = () => {
         ariaExpanded={isOpen}
         onClick={handleClick}
       >
-        <div className="space-y-2">
-          <div className="h-0.5 w-6 bg-gray"></div>
-          <div className="h-0.5 w-6 bg-gray"></div>
-          <div className="h-0.5 w-6 bg-gray"></div>
-        </div>
+        <span className="flex flex-col items-center space-y-2">
+          <span className="h-0.5 w-6 bg-gray"></span>
+          <span className="h-0.5 w-6 bg-gray"></span>
+          <span className="h-0.5 w-6 bg-gray"></span>
+        </span>
       </Button>
       <div
         className={`fixed left-[6%] z-50 w-[88%] rounded-lg bg-dark-violet px-6 py-4 text-center transition-all duration-200 md:flex-1 lg:static lg:flex  lg:w-auto lg:justify-between lg:bg-transparent lg:p-0 lg:text-[14.5px] ${isOpen ? "top-24" : "-top-[25rem] lg:top-24"}`}
