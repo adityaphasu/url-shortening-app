@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Features = () => {
   return (
-    <section className="space-y-[6.1rem] bg-light-violet px-6 pb-20 pt-16 lg:pb-[12.9rem] lg:pt-24">
+    <section className="space-y-[6.1rem] bg-light-violet px-6 pb-20 pt-16 lg:pb-[12.9rem] lg:pt-[4.5rem]">
       <div className="space-y-5 lg:space-y-3">
         <h2 className="text-[1.68rem] lg:text-[2.395rem]">
           Advanced Statistics
