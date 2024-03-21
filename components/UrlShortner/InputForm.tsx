@@ -81,7 +81,7 @@ const InputForm = ({ setUrlList }: InputFormProps) => {
       </Button>
       {error && (
         <p
-          className="absolute -top-6 left-8 italic text-secondary-red lg:left-0 lg:top-[7.5rem]"
+          className="absolute -top-6 left-8 italic text-secondary-red lg:left-16 lg:top-[7.5rem]"
           aria-live="polite"
         >
           {error}
