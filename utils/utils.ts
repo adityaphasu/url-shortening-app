@@ -1,7 +1,7 @@
 export const shortenUrl = async (url: string) => {
   try {
     const response = await fetch(
-      `https://csclub.uwaterloo.ca/~phthakka/1pt-express/addURL?long=${url}`,
+      `https://csclub.uwaterloo.ca/~phthakka/1pt-express/addURL.php?url=${url}`,
       {
         method: "POST",
       },
