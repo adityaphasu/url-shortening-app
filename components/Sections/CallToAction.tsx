@@ -1,4 +1,6 @@
+"use client";
 import Button from "@/components/Button";
+import { scrollToUrlShortner } from "@/utils/utils";
 
 const CallToAction = () => {
   return (
@@ -6,7 +8,12 @@ const CallToAction = () => {
       <h2 className="text-[1.7rem] -tracking-[0.01em] text-white lg:text-[2.4rem]">
         Boost your links today
       </h2>
-      <Button classname="px-10 py-3.5 rounded-full">Get Started</Button>
+      <Button
+        classname="px-10 py-3.5 rounded-full"
+        onClick={scrollToUrlShortner}
+      >
+        Get Started
+      </Button>
     </section>
   );
 };

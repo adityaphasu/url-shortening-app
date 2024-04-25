@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { scrollToUrlShortner } from "@/utils/utils";
 
 const Hero = () => {
   return (
@@ -23,7 +25,12 @@ const Hero = () => {
             your links are performing.
           </p>
         </div>
-        <Button classname="rounded-full px-10 py-3.5">Get Started</Button>
+        <Button
+          classname="rounded-full px-10 py-3.5"
+          onClick={scrollToUrlShortner}
+        >
+          Get Started
+        </Button>
       </div>
     </section>
   );
