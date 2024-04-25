@@ -22,3 +22,7 @@ export const isValidUrl = (url: string) => {
     return false;
   }
 };
+
+export const scrollToUrlShortner = () => {
+  window.scrollTo({ top: 500, behavior: "smooth" });
+};
