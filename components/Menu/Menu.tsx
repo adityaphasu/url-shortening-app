@@ -33,7 +33,7 @@ const Menu = () => {
         </span>
       </Button>
       <div
-        className={`fixed left-[6%] z-50 w-[88%] rounded-lg bg-dark-violet px-6 py-4 text-center transition-all duration-200 md:flex-1 lg:static lg:flex  lg:w-auto lg:justify-between lg:bg-transparent lg:p-0 lg:text-[14.5px] ${isOpen ? "top-24" : "-top-[25rem] lg:top-24"}`}
+        className={`fixed left-[6%] z-50 w-[88%] rounded-lg bg-dark-violet px-6 py-4 text-center transition-all duration-500 md:flex-1 lg:static lg:flex lg:w-auto lg:justify-between lg:bg-transparent lg:p-0 lg:text-[14.5px] ${isOpen ? "top-24" : "-top-[25rem] lg:top-24"}`}
       >
         <MenuItems />
       </div>
